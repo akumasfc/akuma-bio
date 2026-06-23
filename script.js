@@ -13,10 +13,10 @@ new Date().getFullYear();
 const playlist = [
 
 {
-    name: "Song 1",
-    artist: "Akuma Playlist",
-    src: "assets/music/song1.mp3",
-    cover: "assets/covers/song1.jpg"
+    name: "On Melancholy Hill",
+    artist: "Gorillaz",
+    src: "music/On Melancholy Hill - Gorillaz.mp3",
+    cover: "covers/Cover of On Melancholy Hill by Gorillaz.jpg"
 },
 
 {
