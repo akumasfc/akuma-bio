@@ -591,40 +591,74 @@ body{
 
 @media (max-width:480px){
 
+    .page{
+        padding-bottom:210px;
+    }
+
     .card{
         max-width:100%;
         padding:65px 16px 22px;
     }
 
     .profile__photo{
-
         width:90px;
         height:90px;
-
         top:-105px;
     }
 
     .profile__name{
         font-size:1.9rem;
-        text-shadow:0 2px 15px rgba(255,255,255,.12);
     }
 
     .music-dock{
+        position:fixed;
+        left:50%;
+        bottom:12px;
+        transform:translateX(-50%);
+        width:95vw;
+        z-index:9999;
+    }
 
-    position:fixed;
+    .music-player{
+        padding:12px;
+        border-radius:24px;
+    }
 
-    left:50%;
-    bottom:20px;
-
-    transform:translateX(-50%);
-
-    width:95vw;
-
-    z-index:9999;
+    .music-top{
+        gap:10px;
+        margin-bottom:10px;
     }
 
     .cover{
-        width:65px;
-        height:65px;
+        width:52px;
+        height:52px;
+    }
+
+    .music-info h3{
+        font-size:.88rem;
+    }
+
+    .music-info p{
+        font-size:.78rem;
+    }
+
+    .player-controls{
+        margin-top:10px;
+        gap:12px;
+    }
+
+    .player-controls button{
+        width:38px;
+        height:38px;
+    }
+
+    .play-btn{
+        width:48px !important;
+        height:48px !important;
+        font-size:1rem;
+    }
+
+    .volume-row{
+        margin-top:10px;
     }
 }
