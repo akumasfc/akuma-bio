@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akuma | Links</title>
+    <meta name="description" content="TikTok Editor">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="Wallpaper/Wallpaper1.mp4" type="video/mp4">
+    </video>
+
+    <!-- OSCURECEDOR SUAVE -->
+    <div class="overlay"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="page">
+
+        <section class="card">
+
+            <header class="profile">
+
+                <img
+                    src="img/Perfil.png"
+                    alt="Foto de perfil de Akuma"
+                    class="profile__photo"
+                >
+
+                <h1 class="profile__name">Akuma</h1>
+
+                <p class="profile__bio">
+                    TikTok Editor
+                </p>
+
+            </header>
+
+            <nav class="links">
+
+                <a
+                    href="#"
+                    class="link-btn btn-principal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="img/TiktokIcon.svg" alt="">
+                    <span>TikTok</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="img/YoutubeIcon.svg" alt="">
+                    <span>YouTube</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="img/InstagramIcon.svg" alt="">
+                    <span>Instagram</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="img/DiscordIcon.svg" alt="">
+                    <span>Discord</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="img/GitHubIcon.svg" alt="">
+                    <span>GitHub</span>
+                </a>
+
+            </nav>
+
+            <footer class="footer">
+                © <span id="year"></span> Akuma
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- REPRODUCTOR GRANDE -->
+    <section class="music-dock">
+
+        <div class="music-player">
+
+            <div class="music-top">
+
+                <img
+                    id="cover"
+                    class="cover"
+                    src="assets/covers/song1.jpg"
+                    alt="Cover"
+                >
+
+                <div class="music-info">
+
+                    <h3 id="songName">
+                        Song 1
+                    </h3>
+
+                    <p id="artistName">
+                        Akuma Playlist
+                    </p>
+
+                </div>
+
+            </div>
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <div class="time-row">
+
+                <span id="currentTime">
+                    0:00
+                </span>
+
+                <span id="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <div class="player-controls">
+
+                <button id="prevBtn">
+                    ⏮
+                </button>
+
+                <button id="playBtn" class="play-btn">
+                    ▶
+                </button>
+
+                <button id="nextBtn">
+                    ⏭
+                </button>
+
+            </div>
+
+            <div class="volume-row">
+
+                <span>🔊</span>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="100"
+                    value="100"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AUDIO -->
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
