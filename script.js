@@ -239,13 +239,14 @@ progress.addEventListener("input", () => {
 // VOLUMEN
 // =========================
 
-volume.addEventListener("input", () => {
+audio.volume = 0.5;
+volume.value = 50;
 
+volume.addEventListener("input", () => {
     audio.volume =
     volume.value / 100;
 });
 
-audio.volume = 1;
 
 
 // =========================
@@ -348,3 +349,26 @@ style.innerHTML = `
 `;
 
 document.head.appendChild(style);
+
+window.addEventListener("load", async () => {
+
+try {
+
+    await audio.play();
+
+    playBtn.textContent =
+    "⏸";
+
+    cover.classList.add("playing");
+
+    musicPlayer.classList.add("playing");
+
+} catch(error) {
+
+    console.log(
+    "Autoplay bloqueado por el navegador"
+    );
+
+}
+
+});
