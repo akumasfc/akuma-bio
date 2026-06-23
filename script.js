@@ -406,3 +406,12 @@ try {
 }
 
 });
+
+document.querySelectorAll('.link-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        gtag('event', 'click', {
+            event_category: 'links',
+            event_label: btn.querySelector('span').textContent
+        });
+    });
+});
