@@ -239,8 +239,8 @@ progress.addEventListener("input", () => {
 // VOLUMEN
 // =========================
 
-audio.volume = 0.5;
-volume.value = 50;
+audio.volume = 0.25;
+volume.value = 25;
 
 volume.addEventListener("input", () => {
     audio.volume =
@@ -349,6 +349,40 @@ style.innerHTML = `
 `;
 
 document.head.appendChild(style);
+
+// =========================
+// ENTER SCREEN
+// =========================
+
+const enterBtn =
+document.getElementById("enterBtn");
+
+const enterScreen =
+document.getElementById("enterScreen");
+
+enterBtn.addEventListener("click", async () => {
+
+    try{
+
+        await audio.play();
+
+        playBtn.textContent =
+        "⏸";
+
+        cover.classList.add("playing");
+
+        musicPlayer.classList.add("playing");
+
+    }catch(error){
+
+        console.log(error);
+
+    }
+
+    enterScreen.style.display =
+    "none";
+
+});
 
 window.addEventListener("load", async () => {
 
