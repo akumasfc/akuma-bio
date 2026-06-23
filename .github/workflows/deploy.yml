@@ -1,0 +1,27 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Inject version
+        run: |
+          VERSION=$(git rev-parse --short HEAD)
+          sed -i "s/BUILD_VERSION/$VERSION/g" index.html
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: .
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v2
